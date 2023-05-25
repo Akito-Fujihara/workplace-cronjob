@@ -12,8 +12,7 @@ jobs:
         persist-credentials: ${{ secrets.SUSHI_GITHUB_TOKEN }}
     - name: Notify
       run: |
-        date -d tomorrow '+%Y-%m/%d'
-        env
+        bash notify_weekly_on_thesday.sh
       env: 
         TZ: "Asia/Tokyo"
         WP_GROUP_ID: 1245816086300488
