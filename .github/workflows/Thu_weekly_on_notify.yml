@@ -9,12 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@master
       with:
-        persist-credentials: false
-        fetch-depth: 0
+        persist-credentials: ${{ secrets.SUSHI_GITHUB_TOKEN }}
     - name: Create local changes
       run: |
         touch test.txt
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.SUSHI_GITHUB_TOKEN }}
