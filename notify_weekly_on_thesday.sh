@@ -4,8 +4,8 @@
 # date=`date -v+1d '+%Y-%m-%d'`
 # date_dir=`date -v+1d '+%Y-%m/%d'`
 # linux
-date=`date -d '1 days'` '+%Y-%m-%d'`
-date_dir=`date -d '1 days'` '+%Y-%m/%d'`
+date=`date -d '1 days' '+%Y-%m-%d'`
+date_dir=`date -d '1 days' '+%Y-%m/%d'`
 
 # 開催日のdirを作成
 mkdir -p $date_dir
