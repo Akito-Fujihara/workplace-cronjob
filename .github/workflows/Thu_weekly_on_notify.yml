@@ -15,8 +15,8 @@ jobs:
         bash notify_weekly_on_thesday.sh
       env: 
         TZ: "Asia/Tokyo"
-        WP_GROUP_ID: 1245816086300488
-        WP_TOKEN: ${{ secrets.WP_TOKEN }}
+        WP_GROUP_ID: "1245816086300488"
+        WP_TOKEN: "${{ secrets.WP_TOKEN }}"
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
