@@ -1,1 +1,1 @@
-weeweekly_notify_id=1247429969472433
+weeweekly_notify_id=1247430069472423
