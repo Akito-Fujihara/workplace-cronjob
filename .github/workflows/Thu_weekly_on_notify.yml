@@ -16,7 +16,8 @@ jobs:
         persist-credentials: ${{ secrets.SUSHI_GITHUB_TOKEN }}
     - name: Notify
       run: |
-        date -d '1 days'
+        date -d tomorrow '+%Y-%m/%d'
+        env
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
