@@ -20,5 +20,11 @@ json=`curl -X POST https://graph.facebook.com/${WP_GROUP_ID}/feed \
     }
 EOS`
 
+echo $json
+
+if [[ "$json" == *error* ]]; then
+  exit 1
+fi
+
 weeweekly_notify_id=`echo $json | jq .id | awk -F'[_"]' '{print $3}'`
 echo "weeweekly_notify_id=$weeweekly_notify_id" > ./$date_dir/text.txt
