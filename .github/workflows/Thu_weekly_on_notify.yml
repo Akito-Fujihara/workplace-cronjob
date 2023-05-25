@@ -3,6 +3,10 @@ name: Notify weekly on Tuesday
 on:
   push:
 
+env:
+  WP_GROUP_ID: 1245816086300488
+  WP_TOKEN: ${{ secrets.WP_TOKEN }}
+
 jobs:
   thu_weekly_on_notify:
     runs-on: ubuntu-latest
@@ -10,9 +14,9 @@ jobs:
     - uses: actions/checkout@master
       with:
         persist-credentials: ${{ secrets.SUSHI_GITHUB_TOKEN }}
-    - name: Create local changes
+    - name: Notify
       run: |
-        touch test.txt
+        bash notify_weekly_on_thesday.sh
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
