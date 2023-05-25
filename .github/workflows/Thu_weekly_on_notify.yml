@@ -1,0 +1,11 @@
+name: Notify weekly on Tuesday
+
+on:
+  push:
+
+jobs:
+  thu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "hello world!"
