@@ -16,7 +16,7 @@ jobs:
         persist-credentials: ${{ secrets.SUSHI_GITHUB_TOKEN }}
     - name: Notify
       run: |
-        bash notify_weekly_on_thesday.sh
+        date -d '1 days'
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
